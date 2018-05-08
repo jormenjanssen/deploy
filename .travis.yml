@@ -1,6 +1,7 @@
 language: go
 env:
-  - GOARM=7
-  - GOARCH=arm
+  global:
+    - GOARM=7
+    - GOARCH=arm
 go:
   - "1.10"
