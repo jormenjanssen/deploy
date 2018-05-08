@@ -6,12 +6,14 @@ env:
 go:
 - '1.10'
 script:
-    - "go build"
+- go build
 after_script:
-    - "tree $HOME"
-    - "ls -l $HOME/gopath/src/github.com/jormenjanssen/deploy"
+- tree $HOME
+- ls -l $HOME/gopath/src/github.com/jormenjanssen/deploy
 deploy:
   provider: releases
   api_key:
-    secure: BbbPftZwSPB/lwZDqbsIswaFN1ZrNr0l7+BPFLpvXxT+IJ682NjnEWbhVb9Hqy+s/Lqd0y337CfiueACGy46+GB2HTDpXtoIKW69tW5hx0aRSbUo/r5qBdhNVWrgWWWfiXL+0cY67jSBRv/0AUbRMyQI/YdMlSbqL56aPXxUf1UQ4HPvTpzR5mRJd+EhCv3ZW9oqSFYYUPhQ3kqantx3v3c45mLPo65pl3gbiAQ57f2JVfs1wmv1vLMgBXbyM433mIg9fmulBeTs0/gjLhKOzAPYXcPnQmMpRPE4HseVLKAXK1t5nEngXVq8Vykb71vTH5stON1ziw2S3DWBePq6x2ETiQrAMFOC7CTE4xUM4G/n6lYCxl9LBf//UT8jlsy0MIASDR3Si1A/TSPPJUSIu3CuNqKuElU9xY7qzlthB2CbD8ImwTH5QCYx5QcjwrCyop+qahX3llxnTtTuaIvQfLdWM2dzOVBzTFT9+H2gc4HaYt21V3D4sSML0flj2jzaoFZSa88dcCZ1Vy8CXwJA0doRb84IW9tN00gW3sBuUovSHd8UlK60IvjWI3lid4Q83PY55BoDIwBJ6fr/DpTNdhTIqosXegAUfkdzcmTxoF9dcYQ8dcPJ2nN7upb2Aer4R/MXe7SSHG1c5NhsDn2Rna7l54fH2veZT3nHiH4seUQ=
-  file: main
+    secure: sEoK5OVIfqSQ7MS0UH3q/atVQI/TCVykqTMCbSoKbIxDKzMNOGT4TMtlVKXD/MgJlI/oe9VCx2duqoMETVC9VrrSNiwtobPP2sp8A0aKYJrwysuJPs9gd16t7kU24aZWgegIrw20kaeRbKpjpT2UWk4fvGlghFHNiyKeM+aIe7o6TIZ6JDmath4jWohXrf3PAw4xzS8hmDoTmhOAVB62SoT3SU7V3Tq562cSUQR8S3oeq3vl0s/Mu2Uyg6l55aXhpssEwcotwUhzhN35O+ZpX1VqJ6rBDut060lezTlQ3KuQbvEStqbCRVcrELIYpMSGJ5oMnHeK4hGKcOEAUrm9uwiBTstoPxOYdWFTC2MvwsW7V1mhuAfyaO16Gb8oPAMSpi7seSu4n6khDF8ZT9NuGfxkenEuuo20P3YbfRs45hJ1NNGdkbmHEJCKZj5HEerMnIP0B0WfWKxkvToT/K2nryM1856T5xTlzg0iUEQBiCVBXWOtq4ZReOesuwiLHAX62kg8Sbkp3OMWefg0PjgVM4kbFwmQCcJXb/TCKPKAZC+xAKCztT1cIpXFB7h20nUVWFV3LtNyfCbgiPuQI4kHJ2UaPpu9CCgX3Glx+vI/ePvT9VCfiUVsJ/evVBeoD8aB+J9Lg2TMPGdBo3aaeJ3434j5YlYTHB8ql9QR0/Aa9E0=
+  file: deploy
+  on:
+    repo: jormenjanssen/deploy
