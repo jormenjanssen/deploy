@@ -7,5 +7,5 @@ go:
   - "1.10"
 deploy:
         provider: releases
-        api_key: "$GITHUB_OAUTH_TOKEN"
+        api_key: "1f30b49b4e091f2398247a675740020de8cbdae1"
         skip_cleanup: true
