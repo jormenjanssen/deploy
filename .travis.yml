@@ -2,7 +2,7 @@ language: go
 env:
   global:
   - GOARM=7
-  - GOARCH=arm
+  - GOARCH=mips64
 go:
 - '1.10'
 script:
