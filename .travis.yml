@@ -1,7 +1,14 @@
 language: go
 env:
   global:
-    - GOARM=7
-    - GOARCH=arm
+  - GOARM=7
+  - GOARCH=arm
 go:
-  - "1.10"
+- '1.10'
+deploy:
+  provider: releases
+  api_key:
+    secure: BbbPftZwSPB/lwZDqbsIswaFN1ZrNr0l7+BPFLpvXxT+IJ682NjnEWbhVb9Hqy+s/Lqd0y337CfiueACGy46+GB2HTDpXtoIKW69tW5hx0aRSbUo/r5qBdhNVWrgWWWfiXL+0cY67jSBRv/0AUbRMyQI/YdMlSbqL56aPXxUf1UQ4HPvTpzR5mRJd+EhCv3ZW9oqSFYYUPhQ3kqantx3v3c45mLPo65pl3gbiAQ57f2JVfs1wmv1vLMgBXbyM433mIg9fmulBeTs0/gjLhKOzAPYXcPnQmMpRPE4HseVLKAXK1t5nEngXVq8Vykb71vTH5stON1ziw2S3DWBePq6x2ETiQrAMFOC7CTE4xUM4G/n6lYCxl9LBf//UT8jlsy0MIASDR3Si1A/TSPPJUSIu3CuNqKuElU9xY7qzlthB2CbD8ImwTH5QCYx5QcjwrCyop+qahX3llxnTtTuaIvQfLdWM2dzOVBzTFT9+H2gc4HaYt21V3D4sSML0flj2jzaoFZSa88dcCZ1Vy8CXwJA0doRb84IW9tN00gW3sBuUovSHd8UlK60IvjWI3lid4Q83PY55BoDIwBJ6fr/DpTNdhTIqosXegAUfkdzcmTxoF9dcYQ8dcPJ2nN7upb2Aer4R/MXe7SSHG1c5NhsDn2Rna7l54fH2veZT3nHiH4seUQ=
+  file: main
+  on:
+    repo: jormenjanssen/deploy
