@@ -5,6 +5,8 @@ env:
   - GOARCH=arm
 go:
 - '1.10'
+script:
+    - "go build"
 after_script:
     - "tree $HOME"
     - "ls -l $HOME/gopath/src/github.com/jormenjanssen/deploy"
