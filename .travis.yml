@@ -1,8 +1,6 @@
 language: go
 env:
-- GIMME_OS=linux
-- GIMME_ARCH=arm
-- GIMME_GOARM=7
+- GIMME_OS=linux GIMME_ARCH=arm GIMME_GOARM=7
 go:
 - '1.10'
 script:
