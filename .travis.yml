@@ -3,8 +3,9 @@ env:
 - GIMME_OS=linux GIMME_ARCH=arm GIMME_GOARM=7
 go:
 - '1.10'
+gobuild_args: ARCH=arm ARM=7
 script:
-- go build -v
+- go build
 after_script:
 - ls -l $HOME/gopath/src/github.com/jormenjanssen/deploy
 deploy:
